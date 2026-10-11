@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minecraft plugins | Kitly</title>
+  <meta name="description" content="Every Minecraft plugin on Kitly, made by direkjames for Paper and Purpur servers.">
+  <meta name="theme-color" content="#16150e">
+  <meta property="og:title" content="Minecraft plugins | Kitly">
+  <meta property="og:description" content="Every Minecraft plugin on Kitly, made by direkjames.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ffe566'/%3E%3Cpath d='M10 7v18M22 7l-10 10M15 14l8 11' fill='none' stroke='%231b1900' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#list">Skip to the plugins</a>
+
+  <header class="wrap topbar">
+    <a class="mark" href="./" aria-label="Kitly home">
+      <span class="mark-tile" aria-hidden="true">K</span>Kitly
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="./#apps">Apps</a>
+      <a href="plugins.html" aria-current="page">Plugins</a>
+      <a href="https://github.com/direkjames" data-profile target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h1 class="page-title">Minecraft plugins</h1>
+      <p class="page-lede">Every plugin on Kitly, for Paper and Purpur servers. Each card opens the plugin's page on GitHub.</p>
+    </div>
+
+    <div class="search">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" data-search placeholder="Search plugins" aria-label="Search plugins" autocomplete="off">
+      </div>
+      <p class="count" data-count aria-live="polite"></p>
+    </div>
+
+    <div class="plugins" id="list" data-plugins-all></div>
+
+    <div class="empty" data-empty hidden>
+      <p>No plugins match <strong>&ldquo;<span data-empty-term></span>&rdquo;</strong>. Try a shorter word, like &ldquo;bank&rdquo; or &ldquo;chat&rdquo;.</p>
+      <button class="btn btn-line" type="button" data-clear>Clear search</button>
+    </div>
+
+    <noscript>
+      <p class="noscript">Kitly needs JavaScript to list its plugins. You can also find everything at <a href="https://github.com/direkjames">github.com/direkjames</a>.</p>
+    </noscript>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer">
+      <p>Kitly is made by <a href="https://github.com/direkjames" data-profile target="_blank" rel="noopener">direkjames</a>.</p>
+      <p><a href="./">Back to home</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
