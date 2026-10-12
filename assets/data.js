@@ -57,11 +57,11 @@ window.KITLY = {
       downloads: ["apk"]
     },
     {
-      name: "Ang Pallate Mo",
+      name: "Ang Palette Mo",
       platforms: ["browser"],
       desc: "Free color palette and gradient generator with a palette explorer. No account, no paywall, runs entirely in your browser.",
-      open: "https://direkjames.github.io/ang-pallate-mo/",
-      repo: "direkjames/ang-pallate-mo",
+      open: "https://direkjames.github.io/ang-palette-mo/",
+      repo: "direkjames/ang-palette-mo",
       initials: "AP"
     },
     {
@@ -86,6 +86,20 @@ window.KITLY = {
       repo: "direkjames/Folio-PDF",
       downloads: ["installer", "apk"],
       initials: "FP"
+    },
+    {
+      name: "Typalette",
+      platforms: ["browser"],
+      desc: "Mix and match free font pairings from Google Fonts and Fontshare with your own colors, then preview, save, share and copy the code.",
+      open: "https://direkjames.github.io/Typalette/",
+      repo: "direkjames/Typalette"
+    },
+    {
+      name: "SWYP",
+      platforms: ["android"],
+      desc: "A free Android app for making seamless Instagram carousels. Design on one long canvas, and SWYP slices it into slides that flow into each other when you swipe.",
+      downloads: ["apk"],
+      repo: "direkjames/SWYP"
     },
 
     /* ---------- Kite suite ---------- */
