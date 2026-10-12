@@ -20,6 +20,9 @@
     suite       "kite" puts the app in the Kite suite instead of the main list
     initials    the letters on the app's tile (made from the name if left out)
     icon        optional: a square image, for example "assets/icons/grabbit.png"
+    thumb       optional: a screenshot for the top of the card, for example "assets/thumbs/grabbit.png"
+                Best at 1280 x 800 (16:10). Wider or taller pictures are trimmed to fit.
+                Apps without one show a placeholder with their icon.
 */
 
 window.KITLY = {
@@ -57,11 +60,11 @@ window.KITLY = {
       downloads: ["apk"]
     },
     {
-      name: "Ang Palette Mo",
+      name: "Ang Pallate Mo",
       platforms: ["browser"],
       desc: "Free color palette and gradient generator with a palette explorer. No account, no paywall, runs entirely in your browser.",
-      open: "https://direkjames.github.io/ang-palette-mo/",
-      repo: "direkjames/ang-palette-mo",
+      open: "https://direkjames.github.io/ang-pallate-mo/",
+      repo: "direkjames/ang-pallate-mo",
       initials: "AP"
     },
     {
@@ -107,6 +110,13 @@ window.KITLY = {
       desc: "A calm, dark task manager for Windows with lists, board, table, and calendar views, recurring tasks, and natural-language quick add.",
       downloads: ["installer"],
       repo: "direkjames/Firefly"
+    },
+    {
+      name: "Budgy",
+      platforms: ["android"],
+      desc: "Track your money, budgets, subscriptions and investments in one app. No ads, no account, no subscription. Your data stays on your phone.",
+      downloads: ["apk"],
+      repo: "direkjames/Budgy"
     },
 
     /* ---------- Kite suite ---------- */

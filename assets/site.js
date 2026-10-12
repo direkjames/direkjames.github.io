@@ -195,9 +195,48 @@
     }
   }
 
+  /*
+    The picture at the top of a card: the app's screenshot, or a placeholder
+    with the app's icon until a screenshot is added. A screenshot that fails
+    to load also falls back to the placeholder.
+  */
+  function placeholder(app) {
+    var box = el("div", "app-thumb is-empty");
+    var mark;
+    if (app.icon) {
+      mark = el("img", "thumb-icon");
+      mark.src = app.icon;
+      mark.alt = "";
+    } else {
+      mark = el("span", "thumb-icon thumb-letters", initials(app));
+    }
+    mark.setAttribute("aria-hidden", "true");
+    box.appendChild(mark);
+    box.appendChild(el("span", "thumb-note", "Screenshot coming soon"));
+    return box;
+  }
+
+  function thumbnail(app) {
+    if (!app.thumb) return placeholder(app);
+    var box = el("div", "app-thumb");
+    var img = el("img", "thumb-shot");
+    img.src = app.thumb;
+    img.alt = "Screenshot of " + app.name;
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.addEventListener("error", function () {
+      if (box.parentNode) box.parentNode.replaceChild(placeholder(app), box);
+    });
+    box.appendChild(img);
+    return box;
+  }
+
   function card(app) {
     var box = el("article", "app");
     box.setAttribute("data-platforms", (app.platforms || []).join(" "));
+    box.appendChild(thumbnail(app));
+    var inner = el("div", "app-body");
+    box.appendChild(inner);
 
     var top = el("div", "app-top");
     var icon;
@@ -219,9 +258,9 @@
     if (app.soon) tags.appendChild(el("li", "is-soon", "Coming soon"));
     titles.appendChild(tags);
     top.appendChild(titles);
-    box.appendChild(top);
+    inner.appendChild(top);
 
-    box.appendChild(el("p", "app-desc", app.desc));
+    inner.appendChild(el("p", "app-desc", app.desc));
 
     var actions = el("div", "app-actions");
     var repoUrl = app.repo ? "https://github.com/" + app.repo : "";
@@ -252,7 +291,7 @@
       actions.appendChild(link("btn btn-accent", repoUrl, "View on GitHub", true));
       showSource = false;
     }
-    if (actions.childNodes.length) box.appendChild(actions);
+    if (actions.childNodes.length) inner.appendChild(actions);
 
     if (showSource || (app.downloads && app.downloads.length && !app.soon)) {
       var foot = el("div", "app-foot");
@@ -260,7 +299,7 @@
       if (app.downloads && app.downloads.length && !app.soon) {
         foot.appendChild(link("app-link", (document.body.getAttribute("data-home") || "") + "#install", "Help installing"));
       }
-      box.appendChild(foot);
+      inner.appendChild(foot);
     }
     return box;
   }
