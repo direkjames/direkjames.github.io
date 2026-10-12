@@ -63,7 +63,7 @@ window.KITLY = {
       name: "Ang Pallate Mo",
       platforms: ["browser"],
       desc: "Free color palette and gradient generator with a palette explorer. No account, no paywall, runs entirely in your browser.",
-      open: "https://direkjames.github.io/ang-pallate-mo/",
+      open: "https://direkjames.github.io/ang-palette-mo",
       repo: "direkjames/ang-pallate-mo",
       initials: "AP"
     },
