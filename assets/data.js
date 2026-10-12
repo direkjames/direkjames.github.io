@@ -36,21 +36,24 @@ window.KITLY = {
       platforms: ["windows"],
       desc: "A free Windows desktop app for downloading video and audio as MP4, MP3 or WAV, made for video editors.",
       repo: "direkjames/Grabbit",
-      downloads: ["installer", "portable"]
+      downloads: ["installer", "portable"],
+      thumb: "assets/thumbs/grabbit.png"
     },
     {
       name: "Qrafty",
       platforms: ["browser"],
       desc: "A free QR code maker that runs entirely in the browser. Codes are static, so they never expire, and nothing you type is sent anywhere.",
       open: "https://direkjames.github.io/Qrafty/",
-      repo: "direkjames/Qrafty"
+      repo: "direkjames/Qrafty",
+      thumb: "assets/thumbs/qrafty.png"
     },
     {
       name: "Smithy",
       platforms: ["browser"],
       desc: "Free browser tools for Minecraft: nickname colors and a circle and sphere planner.",
       open: "https://direkjames.github.io/Smithy/",
-      repo: "direkjames/Smithy"
+      repo: "direkjames/Smithy",
+      thumb: "assets/thumbs/smithy.png"
     },
     {
       name: "Scanwell",
@@ -60,12 +63,13 @@ window.KITLY = {
       downloads: ["apk"]
     },
     {
-      name: "Ang Pallate Mo",
+      name: "Ang Palette Mo",
       platforms: ["browser"],
       desc: "Free color palette and gradient generator with a palette explorer. No account, no paywall, runs entirely in your browser.",
       open: "https://direkjames.github.io/ang-palette-mo",
-      repo: "direkjames/ang-pallate-mo",
-      initials: "AP"
+      repo: "direkjames/ang-palette-mo",
+      initials: "AP",
+      thumb: "assets/thumbs/ang-palette-mo.png"
     },
     {
       name: "dkCutout",
@@ -73,14 +77,16 @@ window.KITLY = {
       desc: "A free background remover that runs entirely in the visitor's browser. No server, no API keys, no uploads. Photos never leave the user's device.",
       open: "https://direkjames.github.io/dkCutout/",
       repo: "direkjames/dkCutout",
-      initials: "dk"
+      initials: "dk",
+      thumb: "assets/thumbs/dkcutout.png"
     },
     {
       name: "Kopya",
       platforms: ["browser"],
       desc: "Free document converter that runs entirely in your browser: PDF to Word, JPG, Excel and EPUB, plus Word, PowerPoint and EPUB to PDF. No uploads, no server.",
       open: "https://direkjames.github.io/Kopya/",
-      repo: "direkjames/Kopya"
+      repo: "direkjames/Kopya",
+      thumb: "assets/thumbs/kopya.png"
     },
     {
       name: "Folio PDF",
@@ -88,14 +94,16 @@ window.KITLY = {
       desc: "Folio PDF is a free, ad-free PDF reader and editor for Android and Windows. No account, no subscriptions.",
       repo: "direkjames/Folio-PDF",
       downloads: ["installer", "apk"],
-      initials: "FP"
+      initials: "FP",
+      thumb: "assets/thumbs/folio-pdf.png"
     },
     {
       name: "Typalette",
       platforms: ["browser"],
       desc: "Mix and match free font pairings from Google Fonts and Fontshare with your own colors, then preview, save, share and copy the code.",
       open: "https://direkjames.github.io/Typalette/",
-      repo: "direkjames/Typalette"
+      repo: "direkjames/Typalette",
+      thumb: "assets/thumbs/typalette.png"
     },
     {
       name: "SWYP",
@@ -109,14 +117,16 @@ window.KITLY = {
       platforms: ["windows"],
       desc: "A calm, dark task manager for Windows with lists, board, table, and calendar views, recurring tasks, and natural-language quick add.",
       downloads: ["installer"],
-      repo: "direkjames/Firefly"
+      repo: "direkjames/Firefly",
+      thumb: "assets/thumbs/firefly.png"
     },
     {
       name: "Budgy",
       platforms: ["android"],
       desc: "Track your money, budgets, subscriptions and investments in one app. No ads, no account, no subscription. Your data stays on your phone.",
       downloads: ["apk"],
-      repo: "direkjames/Budgy"
+      repo: "direkjames/Budgy",
+      thumb: "assets/thumbs/budgy.png"
     },
 
     /* ---------- Kite suite ---------- */
@@ -127,7 +137,8 @@ window.KITLY = {
       desc: "Free browser photo editor with light and color sliders, presets, crop, and export. No sign-up, no uploads.",
       open: "https://direkjames.github.io/kite-photo/",
       repo: "direkjames/kite-photo",
-      icon: "assets/icons/kite-photo.png"
+      icon: "assets/icons/kite-photo.png",
+      thumb: "assets/thumbs/kite-photo.png"
     },
     {
       name: "Kite Reel",
@@ -136,7 +147,8 @@ window.KITLY = {
       desc: "Free multi-track video editor for Windows with video, audio and text layers. No sign-up, no uploads.",
       repo: "direkjames/kite-reel",
       soon: true,
-      icon: "assets/icons/kite-reel.png"
+      icon: "assets/icons/kite-reel.png",
+      thumb: "assets/thumbs/kite-reel.png"
     },
     {
       name: "Kite Paint",
