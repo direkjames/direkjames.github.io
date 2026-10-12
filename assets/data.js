@@ -1,100 +1,128 @@
 /*
-  Kitly's content lives in this one file.
-
-  To add an app or plugin, copy an entry, change the text, and save.
-  Both the home page and the plugins page update on their own.
+  Every app on Kitly lives in this file.
+  To add an app, copy an entry, change it, and save. Apps show in the order listed.
 
   Fields
-    name      shown as the card title
-    desc      one or two sentences
-    link      where the card goes when clicked
-    kind      apps only: the small label on the card ("Windows app")
-    featured  plugins only: true puts it on the home page.
-              The home page shows the first 6 featured plugins,
-              in the order they appear here.
+    name        the app's name
+    platforms   any of "browser", "windows", "android"
+    desc        one or two sentences
+    open        the live link, for apps that run in the browser
+    repo        the GitHub repo, as "owner/name"
+    downloads   any of "installer", "portable", "apk"
+                Kitly reads the repo's latest GitHub release and finds each file by its name:
+                  installer  a file with "setup" in its name, ending in .exe
+                  portable   a file with "portable" in its name, ending in .exe
+                  apk        a file ending in .apk
+                Version numbers in file names are fine. If a release is missing one of
+                these files, that button is hidden.
+    source      false hides the "Source code" link
+    soon        true shows "Coming soon" instead of buttons
+    suite       "kite" puts the app in the Kite suite instead of the main list
+    initials    the letters on the app's tile (made from the name if left out)
+    icon        optional: a square image, for example "assets/icons/grabbit.png"
 */
 
 window.KITLY = {
   owner: "direkjames",
   profile: "https://github.com/direkjames",
+  tagline: "Free apps for the browser, Windows and Android, made by direkjames.",
 
   apps: [
     {
       name: "Grabbit",
-      kind: "Windows app",
+      platforms: ["windows"],
       desc: "A free Windows desktop app for downloading video and audio as MP4, MP3 or WAV, made for video editors.",
-      link: "https://github.com/direkjames/Grabbit"
-    },
-    {
-      name: "dkCutout",
-      kind: "Runs in your browser",
-      desc: "A free background remover that runs entirely in the visitor's browser. No server, no API keys, no uploads. Photos never leave the user's device.",
-      link: "https://direkjames.github.io/dkCutout/"
+      repo: "direkjames/Grabbit",
+      downloads: ["installer", "portable"]
     },
     {
       name: "Qrafty",
-      kind: "Runs in your browser",
-      desc: "A free QR code maker with custom shapes, colors, logos and frames. Codes are made in your browser and never expire.",
-      link: "https://direkjames.github.io/Qrafty/"
+      platforms: ["browser"],
+      desc: "A free QR code maker that runs entirely in the browser. Codes are static, so they never expire, and nothing you type is sent anywhere.",
+      open: "https://direkjames.github.io/Qrafty/",
+      repo: "direkjames/Qrafty"
+    },
+    {
+      name: "Smithy",
+      platforms: ["browser"],
+      desc: "Free browser tools for Minecraft: nickname colors and a circle and sphere planner.",
+      open: "https://direkjames.github.io/Smithy/",
+      repo: "direkjames/Smithy"
+    },
+    {
+      name: "Scanwell",
+      platforms: ["android"],
+      desc: "A document scanner for Android: scan to PDF or JPEG with no watermark, copy and search text in your scans, and organize them in folders. No ads, no account.",
+      repo: "direkjames/Scanwell",
+      downloads: ["apk"]
+    },
+    {
+      name: "Ang Pallate Mo",
+      platforms: ["browser"],
+      desc: "Free color palette and gradient generator with a palette explorer. No account, no paywall, runs entirely in your browser.",
+      open: "https://direkjames.github.io/ang-pallate-mo/",
+      repo: "direkjames/ang-pallate-mo",
+      initials: "AP"
+    },
+    {
+      name: "dkCutout",
+      platforms: ["browser"],
+      desc: "A free background remover that runs entirely in the visitor's browser. No server, no API keys, no uploads. Photos never leave the user's device.",
+      open: "https://direkjames.github.io/dkCutout/",
+      repo: "direkjames/dkCutout",
+      initials: "dk"
+    },
+    {
+      name: "Kopya",
+      platforms: ["browser"],
+      desc: "Free document converter that runs entirely in your browser: PDF to Word, JPG, Excel and EPUB, plus Word, PowerPoint and EPUB to PDF. No uploads, no server.",
+      open: "https://direkjames.github.io/Kopya/",
+      repo: "direkjames/Kopya"
+    },
+    {
+      name: "Folio PDF",
+      platforms: ["windows", "android"],
+      desc: "Folio PDF is a free, ad-free PDF reader and editor for Android and Windows. No account, no subscriptions.",
+      repo: "direkjames/Folio-PDF",
+      downloads: ["installer", "apk"],
+      initials: "FP"
+    },
+
+    /* ---------- Kite suite ---------- */
+    {
+      name: "Kite Photo",
+      suite: "kite",
+      platforms: ["browser"],
+      desc: "Free browser photo editor with light and color sliders, presets, crop, and export. No sign-up, no uploads.",
+      open: "https://direkjames.github.io/kite-photo/",
+      repo: "direkjames/kite-photo",
+      icon: "assets/icons/kite-photo.png"
+    },
+    {
+      name: "Kite Reel",
+      suite: "kite",
+      platforms: ["windows"],
+      desc: "Free multi-track video editor for Windows with video, audio and text layers. No sign-up, no uploads.",
+      repo: "direkjames/kite-reel",
+      soon: true,
+      icon: "assets/icons/kite-reel.png"
+    },
+    {
+      name: "Kite Paint",
+      suite: "kite",
+      platforms: ["windows"],
+      desc: "A free alternative to Photoshop.",
+      soon: true,
+      icon: "assets/icons/kite-paint.png"
     }
   ],
 
-  plugins: [
-    {
-      name: "dkBank",
-      desc: "A premium bank plugin for Paper and Purpur: interest while playing and while away, bank tiers, chest menus, a leaderboard, an alt-account limit and a developer API.",
-      link: "https://github.com/direkjames/dkBank",
-      featured: true
-    },
-    {
-      name: "dkCodes",
-      desc: "A lightweight, highly customizable plugin that allows server owners to generate single-use or multi-use reward codes for items, currency, and ranks.",
-      link: "https://github.com/direkjames/dkCodes",
-      featured: true
-    },
-    {
-      name: "Lodestock",
-      desc: "A stock market for ores. Prices rise when players buy and fall when they sell. Based on OreMarket by OllieJW.",
-      link: "https://github.com/direkjames/Lodestock",
-      featured: true
-    },
-    {
-      name: "dkAFK",
-      desc: "Detects AFK players, including the usual tricks to look active, and runs your own commands when someone stays AFK too long (for example, sending them to the AFK area).",
-      link: "https://github.com/direkjames/dkAFK",
-      featured: true
-    },
-    {
-      name: "dkCommands",
-      desc: "Command aliases, cooldowns, warmups, costs, daily limits, confirmations, a command hider, a command blocker and a command log for our server.",
-      link: "https://github.com/direkjames/dkCommands",
-      featured: true
-    },
-    {
-      name: "dkSleep",
-      desc: "Vote or one-player night skipping for the dk suite.",
-      link: "https://github.com/direkjames/dkSleep",
-      featured: true
-    },
-    {
-      name: "dkChat",
-      desc: "Global chat plugin for our PurpurMC 26.3 server.",
-      link: "https://github.com/direkjames/dkChat"
-    },
-    {
-      name: "dkFly",
-      desc: "Timed flight for our server, built on dkCore.",
-      link: "https://github.com/direkjames/dkFly"
-    },
-    {
-      name: "dkCore",
-      desc: "Shared core plugin for the dk suite on our server.",
-      link: "https://github.com/direkjames/dkCore"
-    },
-    {
-      name: "AutoRestart",
-      desc: "Private Paper plugin that restarts the server on a schedule, with countdown warnings, staff overrides, PlaceholderAPI placeholders and Discord webhook announcements.",
-      link: "https://github.com/direkjames/AutoRestart"
+  suites: {
+    kite: {
+      name: "Kite suite",
+      page: "kite.html",
+      line: "Free creative apps for photos, video and painting.",
+      intro: "Kite is a set of free creative apps with no sign-up and no uploads. Kite Photo runs in your browser today. Kite Reel and Kite Paint are on the way."
     }
-  ]
+  }
 };

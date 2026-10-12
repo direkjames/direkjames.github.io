@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kitly: free apps and Minecraft plugins</title>
-  <meta name="description" content="Kitly is a collection of free apps and Minecraft plugins made by direkjames.">
+  <title>Kitly: free apps by direkjames</title>
+  <meta name="description" content="Free apps for the browser, Windows and Android, made by direkjames.">
   <meta name="theme-color" content="#16150e">
-  <meta property="og:title" content="Kitly">
-  <meta property="og:description" content="Free apps and Minecraft plugins made by direkjames.">
+  <meta property="og:title" content="Kitly: free apps by direkjames">
+  <meta property="og:description" content="Free apps for the browser, Windows and Android, made by direkjames.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23ffe566'/%3E%3Cpath d='M10 7v18M22 7l-10 10M15 14l8 11' fill='none' stroke='%231b1900' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,28 +15,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-  <a class="skip" href="#apps">Skip to the apps</a>
+<body data-home="">
+  <a class="skip" href="#main">Skip to the apps</a>
 
   <header class="wrap topbar">
     <a class="mark" href="./" aria-label="Kitly home">
       <span class="mark-tile" aria-hidden="true">K</span>Kitly
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="#apps">Apps</a>
-      <a href="plugins.html">Plugins</a>
-      <a href="https://github.com/direkjames" data-profile target="_blank" rel="noopener">GitHub</a>
+      <a href="index.html#apps" aria-current="page">Apps</a>
+      <a href="kite.html">Kite suite</a>
+      <a href="https://github.com/direkjames" data-profile rel="noopener">GitHub</a>
     </nav>
   </header>
 
-  <main class="wrap">
+  <main class="wrap" id="main">
     <section class="hero">
       <h1 class="hero-word">Kitly</h1>
       <div class="hero-row">
-        <p class="hero-text">Free apps and Minecraft plugins, made by direkjames.</p>
+        <p class="hero-text" data-tagline>Free apps for the browser, Windows and Android, made by direkjames.</p>
         <div class="hero-links">
           <a class="btn btn-ink" href="#apps">Browse apps</a>
-          <a class="btn btn-ink-line" href="#plugins">Browse plugins</a>
+          <a class="btn btn-ink-line" href="#kite">See the Kite suite</a>
         </div>
       </div>
     </section>
@@ -44,31 +44,51 @@
     <section class="section" id="apps" aria-labelledby="apps-title">
       <div class="section-head">
         <h2 class="section-title" id="apps-title">Apps</h2>
-        <p class="section-note">Free to download and use</p>
+        <div class="chips" data-filter role="group" aria-label="Show apps for"></div>
       </div>
       <div class="apps" data-apps></div>
     </section>
 
-    <section class="section" id="plugins" aria-labelledby="plugins-title">
-      <div class="section-head">
-        <h2 class="section-title" id="plugins-title">Minecraft plugins</h2>
-        <p class="section-note">For Paper and Purpur servers</p>
-      </div>
-      <div class="plugins" data-plugins-home="6"></div>
-      <div class="more" data-plugins-more>
-        <a class="btn btn-accent" href="plugins.html">See more plugins</a>
-        <p class="section-note" data-plugins-note></p>
+    <section class="section" id="kite" aria-labelledby="kite-title">
+      <div class="suite">
+        <div class="suite-head">
+          <svg class="kite-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 54 26 32 50 10 26Z" fill="currentColor"/><path d="M32 4v46M10 26h44" stroke="#1b1900" stroke-width="2.5"/><path d="M32 50c-3 4 3 6 0 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          <div>
+            <h2 class="section-title" id="kite-title" data-suite-text="kite.name">Kite suite</h2>
+            <p class="suite-line" data-suite-text="kite.line"></p>
+          </div>
+          <a class="btn btn-line suite-more" href="kite.html">About the Kite suite</a>
+        </div>
+        <div class="apps apps-suite" data-suite="kite"></div>
       </div>
     </section>
 
-    <noscript>
-      <p class="noscript">Kitly needs JavaScript to list its apps and plugins. You can also find everything at <a href="https://github.com/direkjames">github.com/direkjames</a>.</p>
-    </noscript>
+    <section class="section" id="install" aria-labelledby="install-title">
+      <div class="section-head">
+        <h2 class="section-title" id="install-title">Installing downloaded apps</h2>
+      </div>
+      <div class="help">
+        <div class="help-item">
+          <h3 class="help-name">Windows installer</h3>
+          <p>Run the file and follow the steps. If Windows shows "Windows protected your PC", choose More info, then Run anyway. Windows shows this for apps from small developers that haven't paid for a signing certificate.</p>
+        </div>
+        <div class="help-item">
+          <h3 class="help-name">Windows portable</h3>
+          <p>Nothing to install. Put the file in any folder and open it. To remove the app, delete the file.</p>
+        </div>
+        <div class="help-item">
+          <h3 class="help-name">Android APK</h3>
+          <p>Open the downloaded file. Android asks you to allow installs from your browser the first time; turn it on, go back, and tap Install.</p>
+        </div>
+      </div>
+    </section>
+
+    <noscript><p class="noscript">Kitly needs JavaScript to list its apps. You can also find everything at <a href="https://github.com/direkjames">github.com/direkjames</a>.</p></noscript>
   </main>
 
   <footer class="wrap">
     <div class="footer">
-      <p>Kitly is made by <a href="https://github.com/direkjames" data-profile target="_blank" rel="noopener">direkjames</a>.</p>
+      <p>Kitly is made by <a href="https://github.com/direkjames" data-profile rel="noopener">direkjames</a>.</p>
       <p>Everything here is free.</p>
     </div>
   </footer>
