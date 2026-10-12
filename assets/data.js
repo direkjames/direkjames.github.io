@@ -101,6 +101,13 @@ window.KITLY = {
       downloads: ["apk"],
       repo: "direkjames/SWYP"
     },
+    {
+      name: "Firefly",
+      platforms: ["windows"],
+      desc: "A calm, dark task manager for Windows with lists, board, table, and calendar views, recurring tasks, and natural-language quick add.",
+      downloads: ["installer"],
+      repo: "direkjames/Firefly"
+    },
 
     /* ---------- Kite suite ---------- */
     {
