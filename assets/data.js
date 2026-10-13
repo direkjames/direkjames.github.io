@@ -128,6 +128,14 @@ window.KITLY = {
       repo: "direkjames/Budgy",
       thumb: "assets/thumbs/budgy.png"
     },
+    {
+      name: "Meridian",
+      platforms: ["android"],
+      desc: "A free, private Strava alternative for Android. GPS tracking, training plans, fitness insights, offline maps and Strava import. No account, no feed. Your data stays on your phone.",
+      downloads: ["apk"],
+      repo: "direkjames/Meridian",
+      thumb: "assets/thumbs/meridian.png"
+    },
 
     /* ---------- Kite suite ---------- */
     {
