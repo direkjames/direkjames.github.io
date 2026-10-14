@@ -136,6 +136,14 @@ window.KITLY = {
       repo: "direkjames/Meridian",
       thumb: "assets/thumbs/meridian.png"
     },
+    {
+      name: "Tessera",
+      platforms: ["browser"],
+      desc: "A calm, infinite canvas for ideas, references and plans — a free, private alternative to visual board apps.",
+      open: "https://direkjames.github.io/Tessera",
+      repo: "direkjames/Tessera",
+      thumb: "assets/thumbs/tessera-banner-1280x800.png"
+    },
 
     /* ---------- Kite suite ---------- */
     {
